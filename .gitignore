@@ -1,0 +1,14 @@
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+.env.local
+
+# Dependencies
+node_modules/
