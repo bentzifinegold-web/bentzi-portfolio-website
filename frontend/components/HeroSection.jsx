@@ -13,14 +13,14 @@ export default function HeroSection() {
         className="space-y-8"
       >
         <div className="space-y-4">
-          <motion.h1
+          <motion.img
+            src="/images/bf-logo.png"
+            alt="BF Logo"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold leading-tight"
-          >
-            Bentzi Finegold
-          </motion.h1>
+            className="h-32 md:h-40 w-auto"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
