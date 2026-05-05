@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${montserrat.className} bg-white text-black`}>
         <header className="border-b border-black/20 bg-[#f5f5f0]">
-          <div className="max-w-7xl mx-auto px-8 py-8">
+          <div className="px-8 py-8">
             <div className="mb-8">
               <h1 className="text-2xl md:text-3xl font-bold tracking-tight">BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
             </div>
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         </header>
         {children}
         <footer className="border-t border-black/20 bg-transparent mt-20">
-          <div className="max-w-7xl mx-auto px-8 py-12 text-center text-sm text-gray-600">
+          <div className="px-8 py-12 text-center text-sm text-gray-600">
             <p>&copy; 2025 Bentzi Finegold. All rights reserved.</p>
           </div>
         </footer>

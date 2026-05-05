@@ -96,7 +96,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f5f0]">
       {/* Featured Projects Grid */}
-      <section className="max-w-7xl mx-auto px-8 py-20">
+      <section className="px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
           {(loading ? defaultProjects : projects).map((project, idx) => (
             <Link key={project.id} href={`/projects/${project.id}`}>
