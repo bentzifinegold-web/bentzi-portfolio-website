@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
           <div className="px-8 py-8">
             <div className="mb-8">
               <h1 className="text-2xl md:text-3xl font-bold tracking-tight">BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
+              <p className="text-sm text-gray-500 mt-2 tracking-wide">Exploring the intersection of material, form, and function</p>
             </div>
             <nav className="flex gap-8 border-t border-black/20 pt-6 flex-wrap">
               <a href="/" className="text-sm font-bold uppercase tracking-wide text-black hover:text-gray-600 transition-colors pb-2 border-b-2 border-black">
