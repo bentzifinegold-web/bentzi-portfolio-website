@@ -1,4 +1,10 @@
 import './globals.css'
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+})
 
 export const metadata = {
   title: 'Bentzi Finegold - Design Portfolio',
@@ -9,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+      <body className={`${montserrat.className} bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100`}>
         <header className="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/50 sticky top-0 z-40">
           <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
