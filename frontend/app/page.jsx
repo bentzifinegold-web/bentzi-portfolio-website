@@ -140,13 +140,9 @@ export default function Home() {
       <section className="px-8 pt-12 pb-20">
         <div className="grid grid-cols-2 gap-8">
           {defaultProjects.map((project, idx) => (
-            <div key={project.id} className={idx % 2 !== 0 ? 'mt-24' : ''}>
-              <ProjectCard project={project} idx={idx} />
-            </div>
+            <ProjectCard key={project.id} project={project} idx={idx} />
           ))}
-          <div>
-            <PhotographyCard />
-          </div>
+          <PhotographyCard />
         </div>
       </section>
 
