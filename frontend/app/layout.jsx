@@ -19,8 +19,7 @@ export default function RootLayout({ children }) {
         <header className="border-b border-black/20 bg-transparent sticky top-0 z-40">
           <div className="max-w-7xl mx-auto px-8 py-8">
             <div className="mb-8">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">BENTZI FINEGOLD</h1>
-              <p className="text-lg text-gray-600">PRODUCT DESIGNER & CRAFTSPERSON</p>
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight">BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
             </div>
             <nav className="flex gap-8 border-t border-black/20 pt-6 flex-wrap">
               <a href="/" className="text-sm font-bold uppercase tracking-wide text-black hover:text-gray-600 transition-colors pb-2 border-b-2 border-black">
