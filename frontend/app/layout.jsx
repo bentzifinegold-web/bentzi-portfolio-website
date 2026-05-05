@@ -16,27 +16,33 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${montserrat.className} bg-white text-black`}>
-        <header className="border-b border-gray-200/50 bg-white/50 backdrop-blur supports-[backdrop-filter]:bg-white/50 sticky top-0 z-40">
-          <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Bentzi Finegold
+        <header className="border-b border-black/20 bg-transparent sticky top-0 z-40">
+          <div className="max-w-7xl mx-auto px-8 py-8">
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">BENTZI FINEGOLD</h1>
+              <p className="text-lg text-gray-600">PRODUCT DESIGNER & CRAFTSPERSON</p>
             </div>
-            <div className="flex gap-8">
-              <a href="#projects" className="text-sm font-medium text-black hover:text-blue-600 transition-colors">
+            <nav className="flex gap-8 border-t border-black/20 pt-6 flex-wrap">
+              <a href="/" className="text-sm font-bold uppercase tracking-wide text-black hover:text-gray-600 transition-colors pb-2 border-b-2 border-black">
                 Projects
               </a>
-              <a href="#about" className="text-sm font-medium text-black hover:text-blue-600 transition-colors">
+              <a href="#about" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
                 About
               </a>
-              <a href="#contact" className="text-sm font-medium text-black hover:text-blue-600 transition-colors">
+              <a href="#contact" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
                 Contact
               </a>
-            </div>
-          </nav>
+              <div className="ml-auto flex gap-6">
+                <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
+                  LinkedIn
+                </a>
+              </div>
+            </nav>
+          </div>
         </header>
         {children}
-        <footer className="border-t border-gray-200/50 bg-white/50 mt-20">
-          <div className="max-w-6xl mx-auto px-6 py-12 text-center text-sm text-gray-600">
+        <footer className="border-t border-black/20 bg-transparent mt-20">
+          <div className="max-w-7xl mx-auto px-8 py-12 text-center text-sm text-gray-600">
             <p>&copy; 2025 Bentzi Finegold. All rights reserved.</p>
           </div>
         </footer>

@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import ProjectCard from '@/components/ProjectCard'
-import HeroSection from '@/components/HeroSection'
+import Link from 'next/link'
 
 export default function Home() {
   const [projects, setProjects] = useState([])
@@ -95,42 +94,47 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
-          <p className="text-xl text-slate-400 max-w-3xl">
-            Each project represents a unique exploration of material, form, and function. From kinetic sculptures to functional climbing tools, these pieces demonstrate innovative design thinking and meticulous craftsmanship.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+    <main className="min-h-screen bg-[#f5f5f0]">
+      {/* Featured Projects Grid */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
           {(loading ? defaultProjects : projects).map((project, idx) => (
-            <ProjectCard key={project.id} project={project} index={idx} />
+            <Link key={project.id} href={`/projects/${project.id}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative h-80 md:h-96 overflow-hidden bg-gray-200 mb-6">
+                  <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:brightness-95 transition-all duration-300"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold uppercase tracking-wide">{project.title}</h3>
+                  <p className="text-sm text-gray-600 uppercase tracking-wide">{project.year}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
+      {/* About Section */}
+      <section id="about" className="max-w-7xl mx-auto px-8 py-20 border-t border-black/20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="glass p-12 rounded-2xl"
+          className="max-w-3xl"
         >
-          <h2 className="text-4xl font-bold mb-8">About</h2>
-          <div className="space-y-6 text-lg text-slate-300">
+          <h2 className="text-3xl font-bold uppercase tracking-wide mb-8">About</h2>
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
               Bentzi Finegold is a designer and maker focused on innovative product design, material experimentation, and kinetic sculptures. Each project begins with a question about how materials can move, interact, and serve function in unexpected ways.
             </p>
@@ -144,23 +148,29 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
+      {/* Contact Section */}
+      <section id="contact" className="max-w-7xl mx-auto px-8 py-20 border-t border-black/20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="glass p-12 rounded-2xl text-center"
         >
-          <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
-          <a href="mailto:bentzifinegold@gmail.com" className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-            Send me an email
+          <h2 className="text-3xl font-bold uppercase tracking-wide mb-8">Contact</h2>
+          <a
+            href="mailto:bentzifinegold@gmail.com"
+            className="inline-block text-lg font-bold uppercase tracking-wide text-black hover:text-gray-600 transition-colors"
+          >
+            bentzifinegold@gmail.com
           </a>
-          <div className="mt-8 flex justify-center">
-            <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 text-cyan-400 hover:text-cyan-300 hover:scale-110 transition-all">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
-              </svg>
+          <div className="mt-8 flex gap-6">
+            <a
+              href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-bold uppercase tracking-wide text-gray-600 hover:text-black transition-colors"
+            >
+              LinkedIn
             </a>
           </div>
         </motion.div>

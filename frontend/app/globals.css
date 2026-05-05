@@ -15,7 +15,7 @@ html {
 
 body {
   line-height: 1.6;
-  background-color: #ffffff;
+  background-color: #f5f5f0;
   color: #000000;
 }
 
@@ -44,14 +44,14 @@ body {
 }
 
 .glass {
-  background: rgba(240, 240, 240, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(200, 200, 200, 0.3);
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
 }
 
 .glass-hover:hover {
-  background: rgba(230, 230, 230, 0.9);
-  border-color: rgba(150, 150, 150, 0.5);
+  background: transparent;
+  border-color: transparent;
   transition: all 0.3s ease;
 }
 
