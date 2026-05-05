@@ -23,15 +23,16 @@ export default function ProjectCard({ project, index }) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: index * 0.1 }}
         viewport={{ once: true }}
-        className="group"
+        className="group cursor-pointer"
+        onClick={() => setShowModal(true)}
       >
         <div className="project-card glass rounded-2xl overflow-hidden">
-          <div className="relative h-96 bg-slate-800 overflow-hidden cursor-pointer" onClick={() => setShowModal(true)}>
+          <div className="relative h-96 bg-slate-800 overflow-hidden">
             <motion.img
               key={imageIndex}
               src={project.images[imageIndex]}
               alt={`${project.title} - ${imageIndex + 1}`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -67,63 +68,12 @@ export default function ProjectCard({ project, index }) {
           </div>
 
           <div className="p-8">
-            <div className="flex items-start justify-between mb-4">
+            <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-3xl font-bold mb-2">{project.title}</h3>
                 <p className="text-slate-400 text-sm">{project.year}</p>
               </div>
             </div>
-
-            <p className="text-slate-300 mb-6 leading-relaxed">{project.description}</p>
-
-            {project.dimensions && (
-              <div className="mb-6">
-                <p className="text-sm font-semibold text-cyan-400 mb-2">Dimensions</p>
-                <p className="text-slate-300">{project.dimensions}</p>
-              </div>
-            )}
-
-            {project.materials && (
-              <div className="mb-6">
-                <p className="text-sm font-semibold text-cyan-400 mb-3">Materials</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.materials.map((material) => (
-                    <span key={material} className="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-slate-200">
-                      {material}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {project.techniques && (
-              <div className="mb-6">
-                <p className="text-sm font-semibold text-cyan-400 mb-3">Techniques</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.techniques.map((technique) => (
-                    <span key={technique} className="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-slate-200">
-                      {technique}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {project.links && (
-              <div className="flex flex-wrap gap-3 pt-6 border-t border-slate-700">
-                {project.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/50 rounded-lg text-cyan-400 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-sm font-semibold"
-                  >
-                    {link.label} →
-                  </a>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </motion.div>
@@ -167,9 +117,64 @@ export default function ProjectCard({ project, index }) {
               </div>
             </div>
 
-            <div className="bg-slate-800 p-6 border-t border-slate-700">
-              <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-slate-300">{project.description}</p>
+            <div className="bg-slate-800 p-8 border-t border-slate-700 max-h-[50vh] overflow-y-auto">
+              <div className="flex items-start justify-between mb-6">
+                <div>
+                  <h3 className="text-3xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-slate-400 text-sm">{project.year}</p>
+                </div>
+              </div>
+
+              <p className="text-slate-300 mb-6 leading-relaxed">{project.description}</p>
+
+              {project.dimensions && (
+                <div className="mb-6">
+                  <p className="text-sm font-semibold text-cyan-400 mb-2">Dimensions</p>
+                  <p className="text-slate-300">{project.dimensions}</p>
+                </div>
+              )}
+
+              {project.materials && (
+                <div className="mb-6">
+                  <p className="text-sm font-semibold text-cyan-400 mb-3">Materials</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.materials.map((material) => (
+                      <span key={material} className="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-slate-200">
+                        {material}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.techniques && (
+                <div className="mb-6">
+                  <p className="text-sm font-semibold text-cyan-400 mb-3">Techniques</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techniques.map((technique) => (
+                      <span key={technique} className="px-3 py-1 bg-slate-700/50 rounded-full text-sm text-slate-200">
+                        {technique}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.links && (
+                <div className="flex flex-wrap gap-3 pt-6 border-t border-slate-700">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/50 rounded-lg text-cyan-400 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-sm font-semibold"
+                    >
+                      {link.label} →
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
