@@ -23,18 +23,18 @@ export default function RootLayout({ children }) {
               <p className="text-sm mt-2 tracking-wide" style={{color: '#6a6a5a'}}>Exploring the intersection of material, form, and function</p>
             </div>
             <nav className="flex gap-8 pt-6 flex-wrap" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
-              <a href="/" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#e8e4dc', borderBottom: '2px solid #e8e4dc'}}>
+              <a href="/projects" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-60" style={{color: '#6a6a5a'}}>
                 Projects
               </a>
-              <a href="#about" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-100" style={{color: '#6a6a5a'}}>
+              <a href="/about" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-60" style={{color: '#6a6a5a'}}>
                 About
               </a>
-              <a href="#contact" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#6a6a5a'}}>
+              <a href="/contact" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-60" style={{color: '#6a6a5a'}}>
                 Contact
               </a>
               <div className="ml-auto flex gap-6">
-                <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#6a6a5a'}}>
-                  LinkedIn
+                <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-60" style={{color: '#6a6a5a'}}>
+                  LinkedIn ↗
                 </a>
               </div>
             </nav>
