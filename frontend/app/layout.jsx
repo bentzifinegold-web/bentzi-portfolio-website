@@ -15,25 +15,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} bg-white text-black`}>
-        <header className="border-b border-black/20 bg-[#f5f5f0]">
+      <body className={`${montserrat.className}`} style={{backgroundColor: '#1a1a18', color: '#e8e4dc'}}>
+        <header style={{borderBottom: '1px solid rgba(255,255,255,0.08)', backgroundColor: '#1a1a18'}}>
           <div className="px-8 py-8">
             <div className="mb-8">
-              <h1 className="text-2xl md:text-3xl font-bold tracking-tight">BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
-              <p className="text-sm text-gray-500 mt-2 tracking-wide">Exploring the intersection of material, form, and function</p>
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight" style={{color: '#e8e4dc'}}>BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
+              <p className="text-sm mt-2 tracking-wide" style={{color: '#6a6a5a'}}>Exploring the intersection of material, form, and function</p>
             </div>
-            <nav className="flex gap-8 border-t border-black/20 pt-6 flex-wrap">
-              <a href="/" className="text-sm font-bold uppercase tracking-wide text-black hover:text-gray-600 transition-colors pb-2 border-b-2 border-black">
+            <nav className="flex gap-8 pt-6 flex-wrap" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
+              <a href="/" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#e8e4dc', borderBottom: '2px solid #e8e4dc'}}>
                 Projects
               </a>
-              <a href="#about" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
+              <a href="#about" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-100" style={{color: '#6a6a5a'}}>
                 About
               </a>
-              <a href="#contact" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
+              <a href="#contact" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#6a6a5a'}}>
                 Contact
               </a>
               <div className="ml-auto flex gap-6">
-                <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-wide text-gray-400 hover:text-black transition-colors pb-2">
+                <a href="https://www.linkedin.com/in/bentzi-finegold-9004481b1/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors" style={{color: '#6a6a5a'}}>
                   LinkedIn
                 </a>
               </div>
@@ -41,8 +41,8 @@ export default function RootLayout({ children }) {
           </div>
         </header>
         {children}
-        <footer className="border-t border-black/20 bg-transparent mt-20">
-          <div className="px-8 py-12 text-center text-sm text-gray-600">
+        <footer className="mt-20" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
+          <div className="px-8 py-12 text-center text-sm" style={{color: '#6a6a5a'}}>
             <p>&copy; 2025 Bentzi Finegold. All rights reserved.</p>
           </div>
         </footer>

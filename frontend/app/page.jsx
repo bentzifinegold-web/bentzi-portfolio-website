@@ -82,8 +82,8 @@ function ProjectCard({ project, className = '', imageHeight = 'h-[500px]' }) {
           </div>
         </div>
         <div className="pt-4 pb-8 space-y-1">
-          <h3 className="text-base font-bold uppercase tracking-wide">{project.title}</h3>
-          <p className="text-sm text-gray-500 uppercase tracking-wide">{project.year}</p>
+          <h3 className="text-base font-bold uppercase tracking-wide" style={{color: '#e8e4dc'}}>{project.title}</h3>
+          <p className="text-sm uppercase tracking-wide" style={{color: '#6a6a5a'}}>{project.year}</p>
         </div>
       </motion.div>
     </Link>
@@ -113,8 +113,8 @@ function PhotographyCard() {
           </div>
         </div>
         <div className="pt-4 pb-8 space-y-1">
-          <h3 className="text-base font-bold uppercase tracking-wide">Photography</h3>
-          <p className="text-sm text-gray-500 uppercase tracking-wide">Ongoing</p>
+          <h3 className="text-base font-bold uppercase tracking-wide" style={{color: '#e8e4dc'}}>Photography</h3>
+          <p className="text-sm uppercase tracking-wide" style={{color: '#6a6a5a'}}>Ongoing</p>
         </div>
       </motion.div>
     </Link>
@@ -135,7 +135,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-[#f5f5f0]">
+    <main className="min-h-screen" style={{backgroundColor: '#1a1a18'}}>
       <section className="px-8 pt-12 pb-20">
 
         {/* Featured hero project — full width */}
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
               <div className="pt-4 pb-10 flex items-baseline gap-4">
                 <h3 className="text-base font-bold uppercase tracking-wide">{defaultProjects[0].title}</h3>
-                <span className="text-sm text-gray-500 uppercase tracking-wide">{defaultProjects[0].year}</span>
+                <span className="text-sm uppercase tracking-wide" style={{color: '#6a6a5a'}}>{defaultProjects[0].year}</span>
               </div>
             </motion.div>
           </Link>
@@ -182,15 +182,15 @@ export default function Home() {
           <div className="col-span-1">
             <PhotographyCard />
           </div>
-          <div className="col-span-2 h-[500px] flex items-center justify-center border border-black/10">
-            <p className="text-gray-400 text-sm uppercase tracking-widest">More Projects Coming Soon</p>
+          <div className="col-span-2 h-[500px] flex items-center justify-center" style={{border: '1px solid rgba(255,255,255,0.06)'}}>
+            <p className="text-sm uppercase tracking-widest" style={{color: '#4a4a3a'}}>More Projects Coming Soon</p>
           </div>
         </div>
 
       </section>
 
       {/* About */}
-      <section id="about" className="px-8 py-20 border-t border-black/20">
+      <section id="about" className="px-8 py-20" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -198,8 +198,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <h2 className="text-sm font-bold uppercase tracking-widest mb-8 text-gray-500">About</h2>
-          <div className="space-y-6 text-lg text-gray-800 leading-relaxed">
+          <h2 className="text-sm font-bold uppercase tracking-widest mb-8" style={{color: '#6a6a5a'}}>About</h2>
+          <div className="space-y-6 text-lg leading-relaxed" style={{color: '#b8b4ac'}}>
             <p>Bentzi Finegold is a designer and maker focused on innovative product design, material experimentation, and kinetic sculptures. Each project begins with a question about how materials can move, interact, and serve function in unexpected ways.</p>
             <p>With expertise spanning analog hand-crafting to digital fabrication, the work combines precision engineering with artistic vision — resulting in pieces that are both beautiful and functional.</p>
           </div>
@@ -207,15 +207,15 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="px-8 py-20 border-t border-black/20">
+      <section id="contact" className="px-8 py-20" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-sm font-bold uppercase tracking-widest mb-8 text-gray-500">Contact</h2>
-          <a href="mailto:bentzifinegold@gmail.com" className="text-2xl font-bold uppercase tracking-wide hover:text-gray-500 transition-colors">
+          <h2 className="text-sm font-bold uppercase tracking-widest mb-8" style={{color: '#6a6a5a'}}>Contact</h2>
+          <a href="mailto:bentzifinegold@gmail.com" className="text-2xl font-bold uppercase tracking-wide transition-colors" style={{color: '#e8e4dc'}}>
             bentzifinegold@gmail.com
           </a>
           <div className="mt-8">
