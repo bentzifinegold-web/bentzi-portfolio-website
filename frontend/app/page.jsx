@@ -50,8 +50,8 @@ export default function Home() {
       dimensions: '3.1" × 2" × 0.9"',
       techniques: ['Analog Cuts', 'Material Manipulation', 'Kinetic Design'],
       links: [
-        { label: 'Demo 1', url: '#' },
-        { label: 'Demo 2', url: '#' },
+        { label: 'Demo 1', url: 'https://www.youtube.com/shorts/s4npu5u-g-I' },
+        { label: 'Demo 2', url: 'https://www.youtube.com/shorts/BZvLM3h1ZbQ' },
       ],
       images: [
         '/images/playback1.png',
