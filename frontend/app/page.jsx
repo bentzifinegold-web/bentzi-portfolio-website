@@ -136,15 +136,17 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{backgroundColor: '#1a1a18'}}>
 
-      {/* Projects Grid — equal 4 columns + photography */}
+      {/* Projects Grid — 2 columns, alternating offset */}
       <section className="px-8 pt-12 pb-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-2 gap-8">
           {defaultProjects.map((project, idx) => (
-            <ProjectCard key={project.id} project={project} idx={idx} />
+            <div key={project.id} className={idx % 2 !== 0 ? 'mt-24' : ''}>
+              <ProjectCard project={project} idx={idx} />
+            </div>
           ))}
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <PhotographyCard />
+          <div>
+            <PhotographyCard />
+          </div>
         </div>
       </section>
 
