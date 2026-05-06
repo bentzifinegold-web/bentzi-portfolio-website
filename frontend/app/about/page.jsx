@@ -4,16 +4,17 @@ import { motion } from 'framer-motion'
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen px-8 py-12" style={{backgroundColor: '#1a1a18'}}>
+    <main className="min-h-screen" style={{backgroundColor: '#1a1a18'}}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-3xl"
+        className="flex items-stretch min-h-screen"
       >
-        <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>About</h1>
-        <div className="flex flex-col md:flex-row gap-16 items-stretch">
-          <div className="flex-1 space-y-8 text-xl leading-relaxed" style={{color: '#b8b4ac'}}>
+        {/* Text side — left padding only */}
+        <div className="flex-1 px-8 py-12">
+          <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>About</h1>
+          <div className="space-y-8 text-xl leading-relaxed" style={{color: '#b8b4ac'}}>
             <p>
               Bentzi Finegold is a designer and maker focused on innovative product design, material experimentation, and kinetic sculptures. Each project begins with a question about how materials can move, interact, and serve function in unexpected ways.
             </p>
@@ -24,13 +25,15 @@ export default function AboutPage() {
               Whether exploring the kinetic possibilities of chipboard or creating family heirlooms, the focus remains on thoughtful design that respects materials and considers the user's interaction with the object.
             </p>
           </div>
-          <div className="w-full md:w-2/5 flex-shrink-0 self-stretch min-h-[400px]">
-            <img
-              src="/images/Headshot.JPG"
-              alt="Bentzi Finegold"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
+        </div>
+
+        {/* Photo side — flush to right edge, no padding */}
+        <div className="flex-1">
+          <img
+            src="/images/Headshot.JPG"
+            alt="Bentzi Finegold"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
       </motion.div>
     </main>
