@@ -1,5 +1,6 @@
 import './globals.css'
 import { Montserrat } from 'next/font/google'
+import Link from 'next/link'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
         <header style={{borderBottom: '1px solid rgba(255,255,255,0.08)', backgroundColor: '#1a1a18'}}>
           <div className="px-8 py-8">
             <div className="mb-8">
-              <h1 className="text-2xl md:text-3xl font-bold tracking-tight" style={{color: '#e8e4dc'}}>BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
+              <Link href="/" className="hover:opacity-70 transition-opacity">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight" style={{color: '#e8e4dc'}}>BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
+              </Link>
               <p className="text-sm mt-2 tracking-wide" style={{color: '#6a6a5a'}}>Exploring the intersection of material, form, and function</p>
             </div>
             <nav className="flex gap-8 pt-6 flex-wrap" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
