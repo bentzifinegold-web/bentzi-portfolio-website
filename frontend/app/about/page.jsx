@@ -9,9 +9,9 @@ export default function AboutPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex items-stretch min-h-screen"
+        className="flex items-stretch"
       >
-        {/* Text side — left padding only */}
+        {/* Text side */}
         <div className="flex-1 px-8 py-12">
           <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>About</h1>
           <div className="space-y-8 text-xl leading-relaxed" style={{color: '#b8b4ac'}}>
@@ -27,12 +27,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Photo side — flush to right edge, no padding */}
-        <div className="flex-1">
+        {/* Photo side — flush to right edge, vertically padded to match text */}
+        <div className="flex-1 py-12 pr-0 flex">
           <img
             src="/images/Headshot.JPG"
             alt="Bentzi Finegold"
-            className="w-full h-full object-cover object-top"
+            className="w-full object-cover object-top"
           />
         </div>
       </motion.div>
