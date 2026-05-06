@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
               <Link href="/" className="hover:opacity-70 transition-opacity">
                 <h1 className="text-2xl md:text-3xl font-bold tracking-tight" style={{color: '#e8e4dc'}}>BENTZI FINEGOLD · PRODUCT DESIGNER</h1>
               </Link>
-              <p className="text-sm mt-2 tracking-wide" style={{color: '#6a6a5a'}}>Exploring the intersection of material, form, and function</p>
             </div>
             <nav className="flex gap-8 pt-6 flex-wrap" style={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
               <a href="/projects" className="text-sm font-bold uppercase tracking-wide pb-2 transition-colors hover:opacity-60" style={{color: '#6a6a5a'}}>
