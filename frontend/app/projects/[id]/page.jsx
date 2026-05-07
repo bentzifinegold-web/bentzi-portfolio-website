@@ -17,7 +17,7 @@ const defaultProjects = [
       { label: 'Demo 1', url: 'https://www.youtube.com/shorts/s4npu5u-g-I' },
       { label: 'Demo 2', url: 'https://www.youtube.com/shorts/BZvLM3h1ZbQ' },
     ],
-    images: ['/images/playback1.png', '/images/playback2.png', '/images/playback3.png'],
+    images: ['/images/landscape.png', '/images/playback2.png', '/images/playback3.png'],
   },
   {
     id: 2,

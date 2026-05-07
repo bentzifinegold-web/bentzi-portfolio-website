@@ -9,7 +9,7 @@ const defaultProjects = [
     title: 'Playback',
     year: '2025',
     subtitle: 'Kinetic Speaker Replica',
-    images: ['/images/playback1.png'],
+    images: ['/images/landscape.png'],
   },
   {
     id: 2,
