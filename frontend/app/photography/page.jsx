@@ -13,7 +13,6 @@ const images = [
   { id: 7,  src: '/images/DJI_0496.jpg' },
   { id: 8,  src: '/images/IDG_20260308_185709_138.jpg' },
   { id: 9,  src: '/images/IDG_20260308_185751_149.jpg' },
-  { id: 10, src: '/images/IMG_0482.JPG' },
   { id: 11, src: '/images/IMG_0484_Original.JPG' },
   { id: 12, src: '/images/dji_fly_20240509_142858_204_1715257764381_photo_optimized.jpg' },
   { id: 13, src: '/images/dji_fly_20240512_164816_234_1715525309985_photo_optimized.jpg' },
