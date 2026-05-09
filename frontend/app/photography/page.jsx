@@ -5,23 +5,22 @@ import { useState } from 'react'
 
 const images = [
   { id: 1,  src: '/images/hero-image.jpg.jpg' },
-  { id: 2,  src: '/images/landscape.png' },
-  { id: 3,  src: '/images/DJI_0202.JPG' },
-  { id: 4,  src: '/images/DJI_0207.JPG' },
-  { id: 5,  src: '/images/DJI_0220.JPG' },
-  { id: 6,  src: '/images/DJI_0224.JPG' },
-  { id: 7,  src: '/images/DJI_0289-EDIT-EDIT-2.jpg' },
-  { id: 8,  src: '/images/DJI_0496.jpg' },
-  { id: 9,  src: '/images/IDG_20260308_185709_138.jpg' },
-  { id: 10, src: '/images/IDG_20260308_185751_149.jpg' },
-  { id: 11, src: '/images/IMG_0482.JPG' },
-  { id: 12, src: '/images/IMG_0484_Original.JPG' },
-  { id: 13, src: '/images/dji_fly_20240509_142858_204_1715257764381_photo_optimized.jpg' },
-  { id: 14, src: '/images/dji_fly_20240512_164816_234_1715525309985_photo_optimized.jpg' },
-  { id: 15, src: '/images/dji_fly_20240804_103328_291_1722782050836_photo_optimized.jpg' },
-  { id: 16, src: '/images/dji_fly_20240804_105736_307_1722783467519_photo_optimized.jpg' },
-  { id: 17, src: '/images/dji_fly_20240804_105852_309_1722783539639_photo_optimized.jpg' },
-  { id: 18, src: '/images/dji_fly_20240811_084250_326_1723380215869_photo_optimized.jpg' },
+  { id: 2,  src: '/images/DJI_0202.JPG' },
+  { id: 3,  src: '/images/DJI_0207.JPG' },
+  { id: 4,  src: '/images/DJI_0220.JPG' },
+  { id: 5,  src: '/images/DJI_0224.JPG' },
+  { id: 6,  src: '/images/DJI_0289-EDIT-EDIT-2.jpg' },
+  { id: 7,  src: '/images/DJI_0496.jpg' },
+  { id: 8,  src: '/images/IDG_20260308_185709_138.jpg' },
+  { id: 9,  src: '/images/IDG_20260308_185751_149.jpg' },
+  { id: 10, src: '/images/IMG_0482.JPG' },
+  { id: 11, src: '/images/IMG_0484_Original.JPG' },
+  { id: 12, src: '/images/dji_fly_20240509_142858_204_1715257764381_photo_optimized.jpg' },
+  { id: 13, src: '/images/dji_fly_20240512_164816_234_1715525309985_photo_optimized.jpg' },
+  { id: 14, src: '/images/dji_fly_20240804_103328_291_1722782050836_photo_optimized.jpg' },
+  { id: 15, src: '/images/dji_fly_20240804_105736_307_1722783467519_photo_optimized.jpg' },
+  { id: 16, src: '/images/dji_fly_20240804_105852_309_1722783539639_photo_optimized.jpg' },
+  { id: 17, src: '/images/dji_fly_20240811_084250_326_1723380215869_photo_optimized.jpg' },
 ]
 
 export default function Photography() {
@@ -36,7 +35,7 @@ export default function Photography() {
       >
         <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>Photography</h1>
 
-        <div className="columns-2 md:columns-3 gap-4 space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-start">
           {images.map((image, idx) => (
             <motion.div
               key={image.id}
@@ -45,7 +44,7 @@ export default function Photography() {
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               viewport={{ once: true }}
               onClick={() => setSelected(image)}
-              className="group cursor-pointer break-inside-avoid"
+              className="group cursor-pointer"
             >
               <div className="overflow-hidden" style={{backgroundColor: '#2a2a28'}}>
                 <img
