@@ -35,7 +35,7 @@ export default function Photography() {
       >
         <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>Photography</h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-start">
+        <div className="columns-2 md:columns-3 gap-4">
           {images.map((image, idx) => (
             <motion.div
               key={image.id}
@@ -44,7 +44,7 @@ export default function Photography() {
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               viewport={{ once: true }}
               onClick={() => setSelected(image)}
-              className="group cursor-pointer"
+              className="group cursor-pointer break-inside-avoid mb-4"
             >
               <div className="overflow-hidden" style={{backgroundColor: '#2a2a28'}}>
                 <img
