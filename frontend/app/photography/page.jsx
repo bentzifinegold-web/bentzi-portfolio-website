@@ -34,27 +34,40 @@ export default function Photography() {
       >
         <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>Photography</h1>
 
-        <div className="columns-2 md:columns-3 gap-4" style={{columnFill: 'auto'}}>
-          {images.map((image, idx) => (
-            <motion.div
-              key={image.id}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
-              viewport={{ once: true }}
-              onClick={() => setSelected(image)}
-              className="group cursor-pointer break-inside-avoid mb-4"
-            >
-              <div className="overflow-hidden" style={{backgroundColor: '#2a2a28'}}>
-                <img
-                  src={image.src}
-                  alt={`Photography ${image.id}`}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {(() => {
+          const col1 = images.filter((_, i) => i % 3 === 0)
+          const col2 = images.filter((_, i) => i % 3 === 1)
+          const col3 = images.filter((_, i) => i % 3 === 2)
+          const renderCol = (col) => (
+            <div className="flex-1 flex flex-col gap-4">
+              {col.map((image, idx) => (
+                <motion.div
+                  key={image.id}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.05 }}
+                  viewport={{ once: true }}
+                  onClick={() => setSelected(image)}
+                  className="group cursor-pointer overflow-hidden"
+                  style={{backgroundColor: '#2a2a28'}}
+                >
+                  <img
+                    src={image.src}
+                    alt={`Photography ${image.id}`}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          )
+          return (
+            <div className="flex gap-4 items-start">
+              {renderCol(col1)}
+              {renderCol(col2)}
+              {renderCol(col3)}
+            </div>
+          )
+        })()}
       </motion.div>
 
       {/* Lightbox */}
