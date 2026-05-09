@@ -34,7 +34,7 @@ export default function Photography() {
       >
         <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>Photography</h1>
 
-        <div className="columns-2 md:columns-3 gap-4">
+        <div className="columns-2 md:columns-3 gap-4" style={{columnFill: 'auto'}}>
           {images.map((image, idx) => (
             <motion.div
               key={image.id}
