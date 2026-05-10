@@ -19,7 +19,7 @@ export default function AboutPage() {
               Bentzi Finegold is a designer and maker focused on innovative product design, material experimentation, and kinetic sculptures. Each project begins with a question about how materials can move, interact, and serve function in unexpected ways.
             </p>
             <p>
-              With expertise spanning analog hand-crafting to digital fabrication, the work combines precision engineering with artistic vision — resulting in pieces that are both beautiful and functional.
+              With expertise spanning analog hand-crafting to digital fabrication, the work combines precision engineering with artistic vision —<br />resulting in pieces that are both beautiful and functional.
             </p>
             <p>
               Whether exploring the kinetic possibilities of chipboard or creating family heirlooms, the focus remains on thoughtful design that respects materials and considers the user's interaction with the object.
