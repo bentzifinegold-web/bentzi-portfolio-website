@@ -16,13 +16,19 @@ export default function AboutPage() {
           <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>About</h1>
           <div className="space-y-8 text-xl leading-relaxed" style={{color: '#b8b4ac'}}>
             <p>
-              Bentzi Finegold is a designer and maker focused on innovative product design, material experimentation, and kinetic sculptures. Each project begins with a question about how materials can move, interact, and serve function in unexpected ways.
+              I'm a product designer who loves turning ideas into real, usable products. I'm drawn to designs that feel clean, functional, and straightforward without being overcomplicated. Most of my work focuses on balancing aesthetics with practicality and figuring out how to make products feel natural to use.
             </p>
             <p>
-              With expertise spanning analog hand-crafting to digital fabrication, the work combines precision engineering with artistic vision —<br />resulting in pieces that are both beautiful and functional.
+              I tend to work fast and instinctively, which is great for generating ideas and pushing projects forward, although it also means I sometimes catch myself going back to fix the small details later. A big part of my process is learning through iteration, experimenting, refining, and improving things as I go.
             </p>
             <p>
-              Whether exploring the kinetic possibilities of chipboard or creating family heirlooms, the focus remains on thoughtful design that respects materials and considers the user's interaction with the object.
+              I'm especially interested in product design, branding, and the way thoughtful design can shape someone's experience with a product. Whether I'm working on packaging, inserts, or consumer products, I enjoy creating things that people actually connect with and enjoy using.
+            </p>
+            <p>
+              Outside of design, I spend a lot of time paying attention to products, branding, and why certain things just feel well made. I like design that feels intentional, approachable, and a little understated.
+            </p>
+            <p>
+              At the end of the day, I just enjoy building things, learning as I go, and getting a little better with every project.
             </p>
           </div>
         </div>
