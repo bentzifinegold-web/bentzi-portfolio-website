@@ -36,7 +36,7 @@ export default function AboutPage() {
         {/* Photo side — flush to right edge, vertically padded to match text */}
         <div className="flex-1 py-12 pr-0 flex">
           <img
-            src="/images/Headshot.JPG"
+            src="/images/IMG_0554.png"
             alt="Bentzi Finegold"
             className="w-full object-cover object-top"
           />
