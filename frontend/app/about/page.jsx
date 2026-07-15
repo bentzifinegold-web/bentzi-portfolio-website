@@ -16,19 +16,7 @@ export default function AboutPage() {
           <h1 className="text-sm font-bold uppercase tracking-widest mb-12" style={{color: '#6a6a5a'}}>About</h1>
           <div className="space-y-8 text-xl leading-relaxed" style={{color: '#b8b4ac'}}>
             <p>
-              I'm a product designer who loves turning ideas into real, usable products. I'm drawn to designs that feel clean, functional, and straightforward without being overcomplicated. Most of my work focuses on balancing aesthetics with practicality and figuring out how to make products feel natural to use.
-            </p>
-            <p>
-              I tend to work fast and instinctively, which is great for generating ideas and pushing projects forward, although it also means I sometimes catch myself going back to fix the small details later. A big part of my process is learning through iteration, experimenting, refining, and improving things as I go.
-            </p>
-            <p>
-              I'm especially interested in product design, branding, and the way thoughtful design can shape someone's experience with a product. Whether I'm working on packaging, inserts, or consumer products, I enjoy creating things that people actually connect with and enjoy using.
-            </p>
-            <p>
-              Outside of design, I spend a lot of time paying attention to products, branding, and why certain things just feel well made. I like design that feels intentional, approachable, and a little understated.
-            </p>
-            <p>
-              At the end of the day, I just enjoy building things, learning as I go, and getting a little better with every project.
+              I'm Bentzi, an Industrial Design student at Lehigh University with a strong eye for design. I know what I like and what I don't, but I'm always down to learn more. I love working with my hands just as much as working digitally, whether that's a sketch, a CAD model, or something built in the garage. I care about clean, honest forms and try to bring that same thinking into everything I make, from a grip tool for climbers to a speaker I built from scratch. When I'm not designing, I'm probably making music, listening to an audiobook, or out sailing.
             </p>
           </div>
         </div>
